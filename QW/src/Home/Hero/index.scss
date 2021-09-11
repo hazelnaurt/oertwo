@@ -1,0 +1,59 @@
+@use '../../shared/scss/index.scss' as *;
+
+.hero {
+  width: 98.5vw;
+  margin: 0.5rem auto;
+  margin-top: $headerHeight2;
+  min-height: 41.9rem;
+  background-image: url("../../assets/imgz/mauro-lima-WkywsU2NjjQ-unsplash.png");
+  background-position: -27% 66%;
+  background-size: 110%;
+  border-radius: 1.7rem;
+  display: flex;
+  flex-direction: column;
+
+  &__upper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $siteWhite;
+
+    &_text_cont {
+      transform: translateY(3.5rem);
+    }
+
+    h1 {
+      font-size: 5.4rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__lower {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    form {
+      display: flex;
+      width: 60vw;
+
+      & > * {
+        flex: 2;
+        margin: 0 1rem;
+      }
+
+      button {
+        flex: 1;
+      }
+    }
+  }
+}

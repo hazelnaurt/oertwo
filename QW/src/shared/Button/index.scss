@@ -1,0 +1,28 @@
+@use '../scss/index.scss' as *;
+
+.button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: $siteViolet;
+  color: $siteWhite;
+  margin-left: -1rem;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateX(0.5rem);
+  }
+
+  &--disabled {
+    background-color: $placeHold;
+    color: $siteBlack;
+
+    &:hover {
+      transform: translateX(0);
+      cursor: progress;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use '../../shared/scss/index.scss' as *;
+
+.header {
+  height: $headerHeight;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  position: fixed;
+  // box-shadow: 0 0.5rem 2rem rgba(black, 0.3);
+
+  &__search_placeholder {
+    width: $searchHeaderWidth;
+  }
+
+  &__upper {
+    height: calc(100% - 3rem);
+    background-color: $siteViolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style: none;
+      }
+    }
+
+    & > * {
+      margin: 2rem;
+    }
+  }
+
+  &__logo {
+    height: calc(100% - 3rem);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__lower {
+    height: 3rem;
+    background-color: $fontFooter;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  &__btn {
+    color: $siteWhite;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $siteBlue;
+    }
+
+    &--circ {
+      border: 1px solid $siteWhite;
+      padding: 1rem 1.5rem;
+      border-radius: 5rem;
+      margin-left: 2rem;
+      transition: all 0.3s;
+
+      &:hover {
+        padding: 1rem 2.2rem;
+        border: 1px solid $siteBlue;
+      }
+    }
+
+    &--sub {
+      font-size: 1.6rem;
+      padding: 2rem 4rem;
+    }
+  }
+}

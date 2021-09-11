@@ -1,0 +1,138 @@
+@use '../shared/scss/index.scss' as *;
+
+.home {
+  width: 98vw;
+  margin: 2rem auto;
+  border-radius: 1.7rem;
+  overflow: hidden;
+  //border: 1px solid black;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: $font;
+    max-width: 700px;
+    text-align: justify;
+  }
+
+  &__two-col {
+    height: 31.4rem;
+    display: flex;
+  }
+
+  &__col {
+    border-radius: 1.7rem;
+    padding: 7rem 4rem;
+
+    &--l {
+      flex: 3;
+    }
+
+    &--s {
+      flex: 1;
+    }
+
+    &--pink {
+      background-color: $columnPink;
+    }
+
+    &--cream {
+      background-color: $columnCream;
+    }
+
+    &--green {
+      background-color: $columnGreen;
+    }
+
+    &--blue {
+      background-color: $columnBlue;
+    }
+  }
+
+  &__one-col {
+    //height: 26.7rem;
+    padding: 7rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+      color: $font;
+    }
+
+    img {
+      margin: 0 3rem;
+    }
+
+    &--blue {
+      background-color: $columnBlue;
+      //margin-bottom: 0px;
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+///// Footer
+.footer {
+  height: 19.4rem;
+  background-color: $fontFooter;
+  color: $siteWhite;
+  display: flex;
+  flex-direction: row;
+
+  & > * {
+    flex: 1;
+  }
+
+  &__social {
+    color: $siteWhite;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    //border: 1px solid red;
+
+    &-item {
+      transform: translateY(4rem);
+      padding-right: 3rem;
+      text-decoration: none;
+      color: inherit;
+      fill: currentColor;
+      margin: 0 0.8rem;
+
+      div {
+        height: 2.3rem;
+        width: 2.3rem;
+
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+///// Utils
+
+.margin-left {
+  margin-left: 1rem;
+}
+
+.margin-right {
+  margin-right: 1rem;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}

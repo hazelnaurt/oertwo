@@ -1,0 +1,30 @@
+@use '../../shared/scss/index.scss' as *;
+
+.title_cont {
+  display: flex;
+  //background-color: tomato;
+  position: relative;
+
+  & > * {
+    margin: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    align-self: flex-end;
+    color: $siteBlue;
+  }
+
+  & > *.end {
+    align-self: flex-end;
+    font-size: 1.6rem;
+    position: absolute;
+    right: 0;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.babelrc": true,
+    "**/.gitignore": true,
+    "**/postcss.config.js": true,
+    "**/jest.config.js": true,
+    "**/styleMock.js": true,
+    "**/webpack.common.js": true,
+    "**/webpack.dev.js": true,
+    "**/webpack.prod.js": true
+  }
+}

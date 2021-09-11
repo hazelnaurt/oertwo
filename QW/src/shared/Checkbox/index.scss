@@ -1,0 +1,47 @@
+@use '../../shared/scss/index.scss' as *;
+
+.checker {
+  //background: linear-gradient(90deg, transparent 10%, transparent 10%);
+  padding-left: 3rem;
+
+  &--toplevel {
+    padding-left: 0;
+    background: linear-gradient(90deg, transparent 10%, $siteViolet 10%);
+    color: $siteWhite;
+    margin-top: 3rem;
+  }
+
+  label {
+    font-weight: 400;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+  }
+
+  &__svg-cont {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.checked {
+  fill: $siteViolet;
+}
+
+.unchecked {
+  stroke: $siteViolet;
+  fill: transparent;
+}

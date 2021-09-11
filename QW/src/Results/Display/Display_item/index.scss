@@ -1,0 +1,63 @@
+@use '../../../shared/scss/index.scss' as *;
+
+.display_item {
+  padding: 1rem;
+  margin: 1.5rem;
+  width: fit-content;
+  border-radius: 1rem;
+  //background-color: red;
+  transition: all 0.2s;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+    z-index: 12;
+    transform: scale(1.1);
+    box-shadow: 1rem 1rem 1rem rgba(black, 0.1);
+  }
+
+  &__image {
+    background-color: $placeHold;
+    width: 16.7rem;
+    height: 12.1rem;
+    border-radius: 1rem;
+    position: relative;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__text {
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $fontFooter;
+      margin: 1rem 0;
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__type {
+    display: flex;
+    font-size: 1.4rem;
+    color: $siteWhite;
+    font-weight: 500;
+    justify-content: flex-end;
+  }
+}
+
+.vid {
+  padding: 1rem;
+  background-color: $siteBlue;
+}
+
+.pdf {
+  padding: 1rem;
+  background-color: $siteViolet;
+}

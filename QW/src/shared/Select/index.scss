@@ -1,0 +1,14 @@
+@use '../scss/index.scss' as *;
+
+.select {
+  padding: 0.9rem;
+  font-size: 1.5rem;
+  flex: 2.5;
+  outline: none;
+  border: none;
+  color: $siteBlack;
+
+  &::-webkit-input-placeholder {
+    color: $placeHold;
+  }
+}

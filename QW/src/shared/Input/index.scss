@@ -1,0 +1,20 @@
+@use '../scss/index.scss' as *;
+
+.input {
+  padding: 1rem;
+  font-size: 1.5rem;
+  flex: 2.5;
+  outline: none;
+  border: none;
+  color: $siteBlack;
+  border: 1.5px solid $siteBlue;
+  transition: all 0.3s;
+
+  &::-webkit-input-placeholder {
+    color: $placeHold;
+  }
+
+  &:focus {
+    flex: 3;
+  }
+}

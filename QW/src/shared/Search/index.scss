@@ -1,0 +1,88 @@
+@use '../scss/index.scss' as *;
+
+.search {
+  width: $searchHeaderWidth;
+  display: flex;
+  position: relative;
+
+  &--error {
+    margin-top: 5rem;
+  }
+
+  & > * {
+    padding: 1rem;
+    flex: 1;
+    z-index: 2;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    flex: 2.5;
+    outline: none;
+    border: none;
+    color: $siteBlack;
+    border-radius: 1rem;
+    transition: all 0.3s;
+
+    &::-webkit-input-placeholder {
+      color: $placeHold;
+    }
+
+    &:focus {
+      flex: 3;
+    }
+
+    &--error {
+      border: 2px solid $error;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: $siteBlue;
+    color: $siteWhite;
+    border-radius: 1rem;
+    margin-left: -1rem;
+    transition: all 0.3s;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 10%;
+      top: 0;
+      left: 0;
+      content: "";
+      background-color: $siteBlue;
+    }
+
+    &:hover {
+      transform: translateX(0.5rem);
+    }
+
+    &--disabled {
+      background-color: $placeHold;
+      color: $siteBlack;
+
+      &:hover {
+        transform: translateX(0);
+        cursor: progress;
+      }
+    }
+  }
+
+  &__errorM {
+    position: absolute;
+    background-color: $siteWhite;
+    color: $error;
+    font-size: 1.4rem;
+    width: 100%;
+    height: 100%;
+    top: -3.2rem;
+    z-index: 1;
+    transition: all 0.2s;
+  }
+}
