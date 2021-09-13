@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./index.scss";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -7,7 +8,7 @@ import Select from "../../shared/Select";
 import Button from "../../shared/Button";
 
 const onSubmit = (values, helper) => {
-  console.log(values);
+  console.log("values");
 };
 
 const validationSchema = Yup.object({
@@ -34,6 +35,7 @@ const levelOptions = [
 ];
 
 function Hero() {
+  const hisme = useHistory();
   return (
     <div className="hero">
       <div className="hero__upper">
@@ -48,8 +50,11 @@ function Hero() {
       <div className="hero__lower">
         <Formik
           initialValues={{ keyword: "", category: "", level: "" }}
-          onSubmit={onSubmit}
-          validationSchema={validationSchema}
+          onSubmit={() => {
+            //console.log("mother fucker");
+            hisme.push("/search");
+          }}
+          //validationSchema={validationSchema}
         >
           <Form className="hero__search" autoComplete="off">
             <Input name="keyword" placeholder="Keyword:" />

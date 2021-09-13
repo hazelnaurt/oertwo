@@ -16,6 +16,10 @@
     transform: translateX(0.5rem);
   }
 
+  &--blue {
+    background-color: $siteBlue;
+  }
+
   &--disabled {
     background-color: $placeHold;
     color: $siteBlack;

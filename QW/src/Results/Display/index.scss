@@ -4,4 +4,20 @@
   flex-direction: row;
   align-content: space-between;
   flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: currentColor;
+    }
+
+    &:visited {
+      color: currentColor;
+    }
+
+    &:link {
+      color: currentColor;
+    }
+  }
 }

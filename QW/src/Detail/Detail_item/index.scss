@@ -1,0 +1,67 @@
+@use '../../shared/scss/index.scss' as *;
+
+.detail_item {
+  padding: 5rem;
+  //border: 1px solid yellow;
+
+  figure {
+    display: flex;
+
+    figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 46rem;
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      div {
+        height: 6rem;
+        //border: 1px solid red;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__image {
+    width: calc(16.7rem * 1.5);
+    height: calc(12.1rem * 1.5);
+    border-radius: 1rem;
+    background-color: $columnPink;
+    margin-right: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  &__text {
+    max-width: 80rem;
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: flex;
+
+      span {
+        display: block;
+      }
+
+      span.bold {
+        //border: 1px solid red;
+        //text-align: right;
+        width: 10rem;
+        font-weight: 600;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 6rem;
+
+    & > * {
+      margin-right: 2rem;
+    }
+  }
+}

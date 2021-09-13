@@ -1,8 +1,32 @@
+@use '../shared/scss/index.scss' as *;
+
 .detail {
-  &__right {
-  }
+  padding-top: $headerHeight;
+  display: flex;
 
   &__left {
+    background-color: $columnBlue;
     width: 34.7rem;
+    padding: 3rem;
+    min-height: calc(100vh - #{$headerHeight});
+
+    h3 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+
+  &__right {
+    background-color: $siteWhite;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
